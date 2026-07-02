@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased font-sans text-slate-900 bg-slate-50 dark:text-slate-100 dark:bg-slate-950 transition-colors duration-200;
+  }
+}
+
+/* Custom Scrollbar Styles for modern dashboard */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded-full hover:bg-slate-400 dark:hover:bg-slate-700 transition-colors;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  @apply bg-white/70 dark:bg-slate-900/75 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/40;
+}
+
+.glass-card {
+  @apply bg-white/50 dark:bg-slate-900/40 backdrop-blur-sm border border-slate-200/45 dark:border-slate-800/35 rounded-2xl;
+}
+
+.glass-input {
+  @apply bg-white/40 dark:bg-slate-950/40 backdrop-blur-sm border border-slate-200/60 dark:border-slate-800/50 rounded-xl focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all outline-none;
+}
+
+/* Slide and Fade transitions */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
