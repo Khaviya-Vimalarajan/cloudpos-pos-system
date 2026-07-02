@@ -139,8 +139,10 @@ export default function Layout() {
     } catch (e) {
       // ignore
     }
-    dispatch(logout());
-    navigate('/login');
+    navigate('/');
+    setTimeout(() => {
+      dispatch(logout());
+    }, 0);
   };
 
   const getNavigationLinks = () => {
