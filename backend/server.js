@@ -23,6 +23,9 @@ const adminRoutes = require('./src/routes/adminRoutes');
 
 const app = express();
 
+// Trust reverse proxy (Railway, Vercel, etc.)
+app.set('trust proxy', 1);
+
 // Connect to Database
 connectDB();
 
