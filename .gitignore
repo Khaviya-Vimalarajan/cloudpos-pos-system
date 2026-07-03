@@ -6,3 +6,4 @@ build/
 .idea/
 .vscode/
 *.log
+backend/src/utils/migrate.js
