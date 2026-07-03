@@ -55,17 +55,6 @@ app.use('/api/employees', employeeRoutes);
 app.use('/api/reports', reportRoutes);
 app.use('/api/admin', adminRoutes);
 
-// Database auto-seeder route
-app.get('/api/seed', async (req, res, next) => {
-  try {
-    const runSeeder = require('./src/utils/seederFunc');
-    await runSeeder();
-    res.json({ message: 'Database successfully seeded with Sri Lankan defaults!' });
-  } catch (err) {
-    next(err);
-  }
-});
-
 // Base route test
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to CloudPOS Multi-Tenant SaaS API' });
