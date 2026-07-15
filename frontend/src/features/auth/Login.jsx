@@ -27,6 +27,8 @@ export default function Login() {
         navigate('/admin');
       } else if (data.user.role === 'Cashier') {
         navigate('/pos');
+      } else if (data.user.role === 'InventoryManager') {
+        navigate('/products');
       } else {
         navigate('/dashboard');
       }

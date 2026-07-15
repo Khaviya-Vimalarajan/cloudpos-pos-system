@@ -17,6 +17,8 @@ export const ProtectedRoute = ({ allowedRoles }) => {
       return <Navigate to="/admin" replace />;
     } else if (user.role === 'Cashier') {
       return <Navigate to="/pos" replace />;
+    } else if (user.role === 'InventoryManager') {
+      return <Navigate to="/products" replace />;
     } else {
       return <Navigate to="/dashboard" replace />;
     }
@@ -35,6 +37,8 @@ export const PublicRoute = () => {
       return <Navigate to="/admin" replace />;
     } else if (user.role === 'Cashier') {
       return <Navigate to="/pos" replace />;
+    } else if (user.role === 'InventoryManager') {
+      return <Navigate to="/products" replace />;
     } else {
       return <Navigate to="/dashboard" replace />;
     }
